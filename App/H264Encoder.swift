@@ -14,7 +14,7 @@ final class H264Encoder {
     private let onFrame: (EncodedFrame) -> Void
     private let onError: (String) -> Void
 
-    init(width: Int32, height: Int32, onFrame: @escaping (EncodedFrame) -> Void,
+    init(width: Int32, height: Int32, frameRate: Int, onFrame: @escaping (EncodedFrame) -> Void,
          onError: @escaping (String) -> Void) throws {
         self.onFrame = onFrame
         self.onError = onError
@@ -46,8 +46,8 @@ final class H264Encoder {
                 kVTCompressionPropertyKey_ProfileLevel: kVTProfileLevel_H264_Baseline_AutoLevel,
                 kVTCompressionPropertyKey_AllowFrameReordering: false,
                 kVTCompressionPropertyKey_AverageBitRate: 2_000_000,
-                kVTCompressionPropertyKey_ExpectedFrameRate: 30,
-                kVTCompressionPropertyKey_MaxKeyFrameInterval: 30,
+                kVTCompressionPropertyKey_ExpectedFrameRate: frameRate,
+                kVTCompressionPropertyKey_MaxKeyFrameInterval: frameRate,
                 kVTCompressionPropertyKey_MaxKeyFrameIntervalDuration: 1
             ]
             for (key, value) in properties {

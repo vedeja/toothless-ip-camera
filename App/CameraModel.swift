@@ -15,6 +15,10 @@ final class CameraModel: ObservableObject {
     @Published private(set) var address: String?
     @Published private(set) var startedAt: Date?
     @Published var frontCamera = false
+    @Published var resolution = CameraResolution.hd720
+    @Published var frameRate = 30
+    @Published private(set) var availableResolutions: [CameraResolution] = [.hd720]
+    @Published private(set) var availableFrameRates = [30]
     @Published var errorMessage: String?
     let pipeline = CameraPipeline()
     #if DEBUG
@@ -35,6 +39,15 @@ final class CameraModel: ObservableObject {
         pipeline.onFrame = { frame in
             server.publish(nalUnits: frame.nalUnits, presentationTime: frame.presentationTime,
                            isKeyframe: frame.isKeyframe, sps: frame.sps, pps: frame.pps)
+        }
+        pipeline.onVideoOptions = { [weak self] resolution, frameRate, resolutions, frameRates in
+            Task { @MainActor in
+                guard let self else { return }
+                self.resolution = resolution
+                self.frameRate = frameRate
+                self.availableResolutions = resolutions
+                self.availableFrameRates = frameRates
+            }
         }
         pipeline.onReady = { [weak self] in
             Task { @MainActor in self?.cameraReady = true }
@@ -116,6 +129,11 @@ final class CameraModel: ObservableObject {
         guard !isStreaming, !isStarting else { return }
         cameraReady = false
         pipeline.switchCamera(front: frontCamera)
+    }
+
+    func configureVideo() {
+        guard cameraReady, !isStreaming, !isStarting else { return }
+        pipeline.configureVideo(resolution: resolution, frameRate: frameRate)
     }
 
     func background() {

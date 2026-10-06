@@ -74,7 +74,7 @@ struct ContentView: View {
                 HStack {
                     Label(model.frontCamera ? "Front" : "Back", systemImage: "camera")
                     Spacer()
-                    Text("H.264 / 720p").monospaced()
+                    Text("H.264 / \(model.resolution.label) / \(model.frameRate) fps").monospaced()
                 }
                 Spacer()
                 if let started = model.startedAt {
@@ -112,6 +112,33 @@ struct ContentView: View {
                 .pickerStyle(.segmented)
                 .frame(maxWidth: 210)
                 .disabled(model.isStreaming || model.isStarting || !model.cameraReady)
+            }
+            Divider()
+            VStack(spacing: 12) {
+                HStack {
+                    Text("Resolution").font(.subheadline.weight(.semibold))
+                    Spacer()
+                    Picker("Resolution", selection: $model.resolution) {
+                        ForEach(model.availableResolutions) { resolution in
+                            Text(resolution.label).tag(resolution)
+                        }
+                    }
+                    .labelsHidden()
+                    .disabled(model.isStreaming || model.isStarting || !model.cameraReady)
+                    .onChange(of: model.resolution) { _, _ in model.configureVideo() }
+                }
+                HStack {
+                    Text("Frame rate").font(.subheadline.weight(.semibold))
+                    Spacer()
+                    Picker("Frame rate", selection: $model.frameRate) {
+                        ForEach(model.availableFrameRates, id: \.self) { rate in
+                            Text("\(rate) fps").tag(rate)
+                        }
+                    }
+                    .labelsHidden()
+                    .disabled(model.isStreaming || model.isStarting || !model.cameraReady)
+                    .onChange(of: model.frameRate) { _, _ in model.configureVideo() }
+                }
             }
             Divider()
             VStack(alignment: .leading, spacing: 8) {
