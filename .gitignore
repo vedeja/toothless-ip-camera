@@ -30,6 +30,9 @@ playground.xcworkspace
 # .swiftpm
 
 .build/
+.DS_Store
+.swiftpm/
+DerivedData/
 
 # CocoaPods
 #
@@ -60,3 +63,9 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Local signing settings and credentials
+Config/Signing.local.xcconfig
+*.p12
+*.p8
+*.mobileprovision

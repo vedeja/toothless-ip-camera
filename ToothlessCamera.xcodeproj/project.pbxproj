@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34845DFDA1E4974CC594D074 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469B3727816D6DD6E80B5131 /* ContentView.swift */; };
+		3EEA16FC116E9C374F1D52D7 /* CameraPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA96EF4B739D802317D4D45 /* CameraPipeline.swift */; };
+		4900AEA0F81179D113EED052 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0141CC78387C3F440DCDD2D /* CameraPreview.swift */; };
+		59C7BE988E2BA69A15A142AF /* StreamingCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7EB59FE04C93C055D63D6AF4 /* StreamingCore */; };
+		B0EAB148F833EDC80E99E1E6 /* ToothlessCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69CD78B3884C572C8EC755 /* ToothlessCameraApp.swift */; };
+		EBED89967CD84F96730F82B9 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919F8E7229DEF4000C075A46 /* CameraModel.swift */; };
+		EC50E1C01928F9B32F6C527E /* H264Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4227AC1EFE680F133B8163 /* H264Encoder.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		178905C9F22C26236C38D941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2B4227AC1EFE680F133B8163 /* H264Encoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H264Encoder.swift; sourceTree = "<group>"; };
+		469B3727816D6DD6E80B5131 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		67C23E10A4514B5B9010FA01 /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
+		919F8E7229DEF4000C075A46 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		A48C06D78A0F1BC228821A1E /* ToothlessCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToothlessCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA96EF4B739D802317D4D45 /* CameraPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPipeline.swift; sourceTree = "<group>"; };
+		E0141CC78387C3F440DCDD2D /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		FC0C65F269D54923BDF1669C /* toothless-ip-camera */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "toothless-ip-camera"; path = .; sourceTree = SOURCE_ROOT; };
+		FC69CD78B3884C572C8EC755 /* ToothlessCameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToothlessCameraApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D79BB6C7F1A2CB72C1F56290 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59C7BE988E2BA69A15A142AF /* StreamingCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27D968C0B69C3C93210C0AA1 = {
+			isa = PBXGroup;
+			children = (
+				E60272EAC88CD19FD9A73B77 /* App */,
+				67C23E10A4514B5B9010FA02 /* Config */,
+				C5A290F77E8604810D905311 /* Packages */,
+				8712BC78D97CB2EE6AABC224 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67C23E10A4514B5B9010FA02 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				67C23E10A4514B5B9010FA01 /* Signing.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		8712BC78D97CB2EE6AABC224 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A48C06D78A0F1BC228821A1E /* ToothlessCamera.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5A290F77E8604810D905311 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				FC0C65F269D54923BDF1669C /* toothless-ip-camera */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		E60272EAC88CD19FD9A73B77 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				919F8E7229DEF4000C075A46 /* CameraModel.swift */,
+				BEA96EF4B739D802317D4D45 /* CameraPipeline.swift */,
+				E0141CC78387C3F440DCDD2D /* CameraPreview.swift */,
+				469B3727816D6DD6E80B5131 /* ContentView.swift */,
+				2B4227AC1EFE680F133B8163 /* H264Encoder.swift */,
+				178905C9F22C26236C38D941 /* Info.plist */,
+				FC69CD78B3884C572C8EC755 /* ToothlessCameraApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C8CF50674DDA47B18745D86 /* ToothlessCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF55620A1C9983AD8A0A5ACA /* Build configuration list for PBXNativeTarget "ToothlessCamera" */;
+			buildPhases = (
+				F0A7302127335BD4196CE58C /* Sources */,
+				D79BB6C7F1A2CB72C1F56290 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToothlessCamera;
+			packageProductDependencies = (
+				7EB59FE04C93C055D63D6AF4 /* StreamingCore */,
+			);
+			productName = ToothlessCamera;
+			productReference = A48C06D78A0F1BC228821A1E /* ToothlessCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		698CC3D06E9222A928A9F44A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1C8CF50674DDA47B18745D86 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 125F095131B6C655C9489A2A /* Build configuration list for PBXProject "ToothlessCamera" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 27D968C0B69C3C93210C0AA1;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7AAD31EBE2F0E9851EC22D25 /* XCLocalSwiftPackageReference "." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8712BC78D97CB2EE6AABC224 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C8CF50674DDA47B18745D86 /* ToothlessCamera */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0A7302127335BD4196CE58C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBED89967CD84F96730F82B9 /* CameraModel.swift in Sources */,
+				3EEA16FC116E9C374F1D52D7 /* CameraPipeline.swift in Sources */,
+				4900AEA0F81179D113EED052 /* CameraPreview.swift in Sources */,
+				34845DFDA1E4974CC594D074 /* ContentView.swift in Sources */,
+				EC50E1C01928F9B32F6C527E /* H264Encoder.swift in Sources */,
+				B0EAB148F833EDC80E99E1E6 /* ToothlessCameraApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0F64792570A61CDC6A936410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67C23E10A4514B5B9010FA01 /* Signing.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.toothless.camera;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		153AE8151242FA5FED18622D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67C23E10A4514B5B9010FA01 /* Signing.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.toothless.camera;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2542963FF3E1E41951C1A45E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		89FF8D8400107F4463732035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		125F095131B6C655C9489A2A /* Build configuration list for PBXProject "ToothlessCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2542963FF3E1E41951C1A45E /* Debug */,
+				89FF8D8400107F4463732035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DF55620A1C9983AD8A0A5ACA /* Build configuration list for PBXNativeTarget "ToothlessCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F64792570A61CDC6A936410 /* Debug */,
+				153AE8151242FA5FED18622D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		7AAD31EBE2F0E9851EC22D25 /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7EB59FE04C93C055D63D6AF4 /* StreamingCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StreamingCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 698CC3D06E9222A928A9F44A /* Project object */;
+}
